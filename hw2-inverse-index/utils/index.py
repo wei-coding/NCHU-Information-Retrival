@@ -16,8 +16,8 @@ def reverse_index(wiki_path='src/wiki_2021_10_05_50000.json', db='mydb.db'):
         count += 1
         if count % 10 == 0:
             print(f'Doing the {count} doc.')
-        words = mysplitter.split([doc['articles']])
-        word_id_pairs = [(w, doc['id']) for w in words[0]]
+        words = mysplitter.split(doc['articles'])
+        word_id_pairs = [(w, doc['id']) for w in words]
         c.executemany("INSERT INTO reverse_index VALUES (?, ?)", word_id_pairs)
     conn.commit()
     c.close()
