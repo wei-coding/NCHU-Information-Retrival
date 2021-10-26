@@ -12,7 +12,7 @@ def reverse_index(wiki_path='src/wiki_2021_10_05_50000.json', db='mydb.db'):
     mysplitter = splitter.Splitter()
     data = json.load(open(wiki_path, 'r', encoding='utf-8'))
     count = 0
-    for doc in data[:1]:
+    for doc in data[:10]:
         count += 1
         if count % 10 == 0:
             print(f'Doing the {count} doc.')
