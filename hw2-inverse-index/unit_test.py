@@ -5,4 +5,5 @@ if __name__ == "__main__":
     # s = ["今天天氣真好"]
     # mysplitter = splitter.Splitter('D:\\Projects\\NCHU-Information-Retrival\\hw2-inverse-index\\data', cuda=True)
     # print(mysplitter.split(s))
-    index.reverse_index(db='myjieba.db')
+    # index.reverse_index(db='myjieba.db')
+    index.retrieve_wiki("生長激素", 'myjieba.db')
