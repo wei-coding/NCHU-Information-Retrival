@@ -4,15 +4,15 @@ import sqlite3
 
 def reverse_index(wiki_path='src/wiki_2021_10_05_50000.json', db='mydb.db'):
     # create database
-    _create_db(db)
+    # _create_db(db)
 
     # insert wiki information to database
     conn = sqlite3.connect(db)
     c = conn.cursor()
     mysplitter = splitter.Splitter()
     data = json.load(open(wiki_path, 'r', encoding='utf-8'))
-    count = 0
-    for doc in data[:1]:
+    count = 36620
+    for doc in data[count:]:
         count += 1
         if count % 10 == 0:
             print(f'Doing the {count} doc.')
@@ -32,3 +32,11 @@ def _create_db(db):
     conn.commit()
     c.close()
     conn.close()
+
+def retrieve_wiki(keyword, db='mydb.db'):
+    if keyword:
+        conn = sqlite3.connect(db)
+        c = conn.cursor()
+        c.execute("SELECT * FROM reverse_index WHERE word = ? ORDER BY doc_id", [keyword])
+        result = c.fetchall()
+        print(result)
