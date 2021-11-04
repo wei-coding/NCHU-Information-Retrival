@@ -1,5 +1,4 @@
-from utils import splitter, index, retrieval
-import os
+from utils import retrieval
 
 if __name__ == "__main__":
     # s = ["今天天氣真好"]
