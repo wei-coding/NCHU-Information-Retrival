@@ -12,4 +12,4 @@ class Splitter:
         jieba.load_userdict(user_dict)
 
     def split(self, sentences):
-        return jieba.cut(sentences)
+        return jieba.cut_for_search(sentences)

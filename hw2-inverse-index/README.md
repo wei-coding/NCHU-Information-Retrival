@@ -3,6 +3,7 @@
 ## 使用套件
 
 + 斷詞系統: [ckiptagger](https://github.com/ckiplab/ckiptagger) ，由中研院開發，號稱有比「結巴」更高的精準度
++ jieba
 
 ## API
 
