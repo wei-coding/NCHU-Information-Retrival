@@ -2,6 +2,7 @@ import argparse
 import utils.retrieval as retri
 import os
 
+    for r in result:
 def main(args):
     if args.database and os.path.exists(args.database):
         retri.retrieve_wiki(args.query, args.database)
