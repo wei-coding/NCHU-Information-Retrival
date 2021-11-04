@@ -1,4 +1,4 @@
-from utils import splitter, index
+from utils import splitter, index, retrieval
 import os
 
 if __name__ == "__main__":
@@ -6,4 +6,4 @@ if __name__ == "__main__":
     # mysplitter = splitter.Splitter('D:\\Projects\\NCHU-Information-Retrival\\hw2-inverse-index\\data', cuda=True)
     # print(mysplitter.split(s))
     # index.reverse_index()
-    index.retrieve_wiki("人心惶惶")
+    retrieval.retrieve_wiki("人心惶惶", 'myjieba.db')
